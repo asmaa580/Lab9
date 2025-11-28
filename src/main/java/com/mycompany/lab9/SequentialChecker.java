@@ -31,7 +31,7 @@ public class SequentialChecker {
     // -----------------------------
     // CHECK ROWS
     // -----------------------------
-    private static void checkRows(int[][] board, List<String> errors) {
+    public static void checkRows(int[][] board, List<String> errors) {
 
         for (int r = 0; r < 9; r++) {
             int[] count = new int[10];
@@ -52,7 +52,7 @@ public class SequentialChecker {
     // -----------------------------
     // CHECK COLUMNS
     // -----------------------------
-    private static void checkCols(int[][] board, List<String> errors) {
+    public static void checkCols(int[][] board, List<String> errors) {
 
         for (int c = 0; c < 9; c++) {
             int[] count = new int[10];
@@ -73,7 +73,7 @@ public class SequentialChecker {
     // -----------------------------
     // CHECK 3×3 BOXES
     // -----------------------------
-    private static void checkBoxes(int[][] board, List<String> errors) {
+    public static void checkBoxes(int[][] board, List<String> errors) {
 
         int boxIndex = 1;
 
