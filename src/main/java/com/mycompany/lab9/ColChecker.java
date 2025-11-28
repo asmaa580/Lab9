@@ -11,7 +11,7 @@ import java.util.List;
  *
  * @author USER
  */
-public class ColChecker {
+public class ColChecker implements Checker{
     private int[][] board;
     private int index;
     private List<String> error;
