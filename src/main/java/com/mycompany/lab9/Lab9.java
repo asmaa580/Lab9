@@ -1,15 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
 package com.mycompany.lab9;
-
 import java.util.Scanner;
 
-/**
- *
- * @author USER
- */
 public class Lab9 {
 
     public static void main(String[] args) {
@@ -33,9 +24,9 @@ public class Lab9 {
         else if (mode == 3) {
             Mode3Checker.run(board);
         } 
-       /* else if (mode == 27) {
+        else if (mode == 27) {
             Mode27Checker.run(board);
-        } */
+        } 
         else {
             System.out.println("Invalid mode. Choose 0, 3, or 27.");
         }

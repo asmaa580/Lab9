@@ -39,7 +39,7 @@ public class SequentialChecker {
          
          for(int num=1;num<=9;num++)
              if (count[num]>1)
-                 errors.add("COL "+(c+1)+"dublicate "+num);
+                 errors.add("COL "+(c+1) + "dublicate "+num);
                  
      }
      
