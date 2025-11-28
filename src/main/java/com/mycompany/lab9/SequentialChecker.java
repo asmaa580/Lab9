@@ -1,16 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.lab9;
-
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author USER
- */
+
 public class SequentialChecker {
      public static void run(int[][] board) {
         List<String> errors = new ArrayList<>();
@@ -27,76 +19,68 @@ public class SequentialChecker {
                 System.out.println(e);
         }
     }
+     public static void checkOneRow(int[][] board, int r, List<String> errors) {
+        int[] count = new int[10];
 
-    // -----------------------------
-    // CHECK ROWS
-    // -----------------------------
-    private static void checkRows(int[][] board, List<String> errors) {
+        for (int c = 0; c < 9; c++) 
+            count[board[r][c]]++;
 
-        for (int r = 0; r < 9; r++) {
-            int[] count = new int[10];
+        for (int num = 1; num <= 9; num++) 
+            if (count[num] > 1) 
+                errors.add("ROW " + (r + 1) + " duplicate " + num);
 
-            for (int c = 0; c < 9; c++) {
-                int value = board[r][c];
-                count[value]++;
-            }
+    }
+     
+     public static void checkOneCol(int[][] board,int c,List<String> errors)
+     {
+         int[] count=new int[10];
+         for(int r=0;r<9;r++)
+             count [board[r][c]]++;
+         
+         for(int num=1;num<=9;num++)
+             if (count[num]>1)
+                 errors.add("COL "+(c+1)+"dublicate "+num);
+                 
+     }
+     
+     public static void checkOneBox(int[][] board,int b,List<String> errors)
+     {
+         int[] count=new int[10];
+         int br = b / 3;   // box row
+        int bc = b% 3;   // box column
 
-            for (int num = 1; num <= 9; num++) {
-                if (count[num] > 1) {
-                    errors.add("ROW " + (r+1) + " has duplicate " + num);
-                }
-            }
-        }
+        for (int r = br * 3; r < br * 3 + 3; r++) 
+            for (int c = bc * 3; c < bc * 3 + 3; c++) 
+                count[board[r][c]]++;
+            
+        
+
+        for (int num = 1; num <= 9; num++) 
+            if (count[num] > 1) 
+                errors.add("BOX " + (b + 1) + " duplicate " + num);
+            
+     }
+
+     
+    public static void checkRows(int[][] board, List<String> errors) {
+
+        for (int r = 0; r < 9; r++) 
+        checkOneRow(board, r, errors);
+    
     }
 
-    // -----------------------------
-    // CHECK COLUMNS
-    // -----------------------------
-    private static void checkCols(int[][] board, List<String> errors) {
+   
+    public static void checkCols(int[][] board,List<String> errors) {
 
-        for (int c = 0; c < 9; c++) {
-            int[] count = new int[10];
-
-            for (int r = 0; r < 9; r++) {
-                int value = board[r][c];
-                count[value]++;
-            }
-
-            for (int num = 1; num <= 9; num++) {
-                if (count[num] > 1) {
-                    errors.add("COL " + (c+1) + " has duplicate " + num);
-                }
-            }
-        }
+         for (int c = 0; c < 9; c++) 
+        checkOneCol(board, c, errors);
+    
     }
 
-    // -----------------------------
-    // CHECK 3×3 BOXES
-    // -----------------------------
-    private static void checkBoxes(int[][] board, List<String> errors) {
+   
+    public static void checkBoxes(int[][] board,List<String> errors) {
 
-        int boxIndex = 1;
-
-        for (int br = 0; br < 3; br++) {
-            for (int bc = 0; bc < 3; bc++) {
-
-                int[] count = new int[10];
-
-                for (int r = br * 3; r < br * 3 + 3; r++) {
-                    for (int c = bc * 3; c < bc * 3 + 3; c++) {
-                        int value = board[r][c];
-                        count[value]++;
-                    }
-                }
-
-                for (int num = 1; num <= 9; num++) {
-                    if (count[num] > 1) {
-                        errors.add("BOX " + (boxIndex) + " has duplicate " + num);
-                    }
-                }
-
-                boxIndex++;
-            }
-        }
-    }
+      for (int b = 0; b < 9; b++) 
+        checkOneBox(board, b, errors);
+}
 }

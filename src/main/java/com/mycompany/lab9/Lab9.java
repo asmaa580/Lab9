@@ -30,10 +30,10 @@ public class Lab9 {
         if (mode == 0) {
             SequentialChecker.run(board);
         } 
-       /* else if (mode == 3) {
+        else if (mode == 3) {
             Mode3Checker.run(board);
         } 
-        else if (mode == 27) {
+       /* else if (mode == 27) {
             Mode27Checker.run(board);
         } */
         else {
