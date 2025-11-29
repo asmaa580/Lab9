@@ -12,7 +12,7 @@ public class CheckerFactory {
             case "COL":
                 return new ColChecker(board,index,error);
             
-            case "Box":
+            case "BOX":
                 return new BoxChecker(board,index,error);
                 
             default:
