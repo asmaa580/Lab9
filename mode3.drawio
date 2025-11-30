@@ -89,7 +89,7 @@
         <mxCell id="iYhZYxRyNFjGpRSYx8W4-10" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;strokeColor=#3333FF;" value="alt" vertex="1">
           <mxGeometry height="200" width="560" x="40" y="630" as="geometry" />
         </mxCell>
-        <mxCell id="iYhZYxRyNFjGpRSYx8W4-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="[errors.isEmpty()]" vertex="1">
+        <mxCell id="iYhZYxRyNFjGpRSYx8W4-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="[rerrors&amp;amp;cerrors&amp;amp;berrorsEmpty]" vertex="1">
           <mxGeometry height="30" width="40" x="120" y="640" as="geometry" />
         </mxCell>
         <mxCell id="iYhZYxRyNFjGpRSYx8W4-12" edge="1" parent="1" source="iYhZYxRyNFjGpRSYx8W4-10" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=0.002;exitY=0.497;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.996;entryY=0.497;entryDx=0;entryDy=0;entryPerimeter=0;" target="iYhZYxRyNFjGpRSYx8W4-10" value="">
@@ -108,7 +108,7 @@
             <mxPoint x="400" y="680" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="iYhZYxRyNFjGpRSYx8W4-15" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" value="print INVALID">
+        <mxCell id="iYhZYxRyNFjGpRSYx8W4-15" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" value="print INVALID&amp;amp; loop on errors">
           <mxGeometry relative="1" x="-0.0123" y="10" as="geometry">
             <mxPoint as="offset" />
             <mxPoint x="475" y="770" as="sourcePoint" />
@@ -147,7 +147,6 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="8GK8BvGUkjOwBrb-7GYc-3" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
-
           <mxGeometry height="192.5" width="10" x="645" y="257.5" as="geometry" />
         </mxCell>
         <mxCell id="8GK8BvGUkjOwBrb-7GYc-5" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;strokeColor=#0000FF;" value="par" vertex="1">
