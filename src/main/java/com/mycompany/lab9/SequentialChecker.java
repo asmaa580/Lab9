@@ -30,50 +30,7 @@ public class SequentialChecker {
             
         }
     }
-     /*public static void checkOneRow(int[][] board, int r, List<String> errors) {
-        int[] count = new int[10];
-
-
-        for (int c = 0; c < 9; c++) 
-            count[board[r][c]]++;
-
-
-        for (int num = 1; num <= 9; num++) 
-            if (count[num] > 1) 
-                errors.add("ROW " + (r + 1) + " duplicate " + num);
-
-    }
-     
-     public static void checkOneCol(int[][] board,int c,List<String> errors)
-     {
-         int[] count=new int[10];
-         for(int r=0;r<9;r++)
-             count [board[r][c]]++;
-         
-         for(int num=1;num<=9;num++)
-             if (count[num]>1)
-                 errors.add("COL "+(c+1) + "dublicate "+num);
-                 
-     }
-     
-     public static void checkOneBox(int[][] board,int b,List<String> errors)
-     {
-         int[] count=new int[10];
-         int br = b / 3;   // box row
-        int bc = b% 3;   // box column
-
-        for (int r = br * 3; r < br * 3 + 3; r++) 
-            for (int c = bc * 3; c < bc * 3 + 3; c++) 
-                count[board[r][c]]++;
-            
-        
-
-        for (int num = 1; num <= 9; num++) 
-            if (count[num] > 1) 
-                errors.add("BOX " + (b + 1) + " duplicate " + num);
-            
-     }
-  */
+ 
      public static void checkOneRow(int[][] board, int r, List<String> errors) {
     // map number -> list of positions
     List<Integer>[] positions = new ArrayList[10];
@@ -138,10 +95,6 @@ public class SequentialChecker {
     
     }
 
-
-    // -----------------------------
-    // CHECK COLUMNS
-    // -----------------------------
     public static void checkCols(int[][] board, List<String> errors) {
 
 
@@ -149,11 +102,6 @@ public class SequentialChecker {
         checkOneCol(board, c, errors);
     
     }
-
-
-    // -----------------------------
-    // CHECK 3×3 BOXES
-    // -----------------------------
 
     public static void checkBoxes(int[][] board,List<String> errors) {
 
