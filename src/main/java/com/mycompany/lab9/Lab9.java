@@ -4,20 +4,21 @@ import java.util.Scanner;
 public class Lab9 {
 
     public static void main(String[] args) {
-          // 1. Read arguments
-        Scanner sc = new Scanner(System.in);
+         
+//        Scanner sc = new Scanner(System.in);
+//        System.out.print("Enter CSV file path: ");
+//        String filePath = sc.nextLine();
+//
+//        System.out.print("Enter mode (0, 3, or 27): ");
+//        int mode = sc.nextInt();
 
-        // Ask user for file path
-        System.out.print("Enter CSV file path: ");
-        String filePath = sc.nextLine();
+        String filePath=args[0];
+        int mode=Integer.parseInt(args[1]);
 
-        // Ask user for mode
-        System.out.print("Enter mode (0, 3, or 27): ");
-        int mode = sc.nextInt();
-        // 2. Load board
+        
         int[][] board = CSVLoader.loadBoard(filePath);
 
-        // 3. Choose mode
+        
         if (mode == 0) {
             SequentialChecker.run(board);
         } 
